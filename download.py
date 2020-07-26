@@ -8,7 +8,9 @@ for i in video_list:
 
     try:
 
-        dw = yt.streams.first()
+        dw = yt.streams.get_highest_resolution()
+
+       # dw = yt.streams.first()
 
         dw.download("./Downloads")
 
